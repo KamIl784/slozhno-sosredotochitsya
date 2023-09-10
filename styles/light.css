@@ -1,18 +1,20 @@
-/*
+/* 
   Специально для светлой темы при наличии класса.
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-/* :root {
+ .theme_light {
   --main-font: 'IBM Plex mono';
-  --bg-color: #FFF1F7;;;
+  --bg-color: #FFF1F7;
   --text-color: #353430;
+  --main-color-text: #353430;
   --accent-text-color: #FF8DCB;
+  --bg-img: url(../images/cover-image-light.png);
 }
 
 .page.theme_light {
-  background-color: var(--bg-color, #FFF1F7);
-  background-image: url(../images/cover-image-light.png);
+  background-color: var(--bg-color), #FFF1F7;
+  background-image: var(--bg-img);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -21,12 +23,51 @@
   margin: auto;
 }
 
-.header__theme-menu-item {
+.header__theme-menu-button {
   background-color: transparent;
-  color: var(--text-color);
+  color: var(--main-color-text, #353430);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--text-color, #353430);
+  border: 0;
+  border: 1px solid var(--main-color-text, #353430);
   pointer-events: none;
-} */
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--main-color-text, #353430);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-block-end: 1px solid var(--main-color-text, #353430);
+}
+
+.rec {
+  position: absolute;
+  overflow: hidden;
+}
+
+.heading {
+  color: var(--accent-text-color, #FF8DCB);
+  text-shadow: 4px 4px 0px #FF0070;
+}
+
+.title-decor {
+  color: var(--main-color-text, #353430);
+  background-color: var(--accent-text-color, #FF8DCB);
+} 
+
+.theme_light + .themes {
+  color: #353430;
+}
+
+.text-shadow:focus {
+  outline: none;
+  border: 1px solid var(--main-color-text, #353430);
+}
+
+.footer {
+  color: var(--accent-text-color, #FF8DCB);
+  text-shadow: 4px 4px 0px #FF0070;
+}
