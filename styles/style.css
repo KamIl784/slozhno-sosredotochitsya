@@ -1,15 +1,13 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
-  --main-font: 'IBM Plex mono';
-  --bg-color: #000028;;
+  --main-font: "IBM Plex mono";
+  --bg-color: #000028;
   --text-color: #000028;
-  --main-color-text: #F1B2CE;
-  --accent-text-color: #FF0070;
+  --main-color-text: #f1b2ce;
+  --accent-text-color: #ff0070;
   --bg-img: url(../images/cover-image-dark.png);
 }
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color, #000028);
   background-image: var(--bg-img);
   background-size: cover;
@@ -40,25 +38,25 @@
   padding-block: 3px;
   background-color: transparent;
   border: none;
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
-  color: var(--accent-text-color, #FF0070);
+  color: var(--accent-text-color, #ff0070);
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-text-color, #FF0070);
+  border: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .header__theme-menu-button:focus {
-  border-block-end: 1px solid var(--accent-text-color, #FF0070);
+  border-block-end: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-text-color, #FF0070);
+  border: 1px solid transparent;
   pointer-events: none;
 }
 
@@ -69,26 +67,26 @@
   top: 16px;
   left: none;
   right: 25px;
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0em;
   text-align: center;
-  color: var(--accent-text-color, #FF0070);
+  color: var(--accent-text-color, #ff0070);
   clip: inherit;
 }
 
 .circle {
-  position: relative;
+  position: absolute;
   left: 66px;
-  bottom: 17px;
+  bottom: 12px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: var(--accent-text-color,#FF0070);
+  background-color: var(--accent-text-color, #ff0070);
   box-shadow: 0px 0px 4px 3px rgba(255, 0, 112, 1);
-  border-block-start: 1px solid var(--accent-text-color, #FF0070);
+  border-block-start: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .corner {
@@ -98,14 +96,14 @@
   height: 25px;
   top: 15px;
   right: 18px;
-  border-block-start: 1px solid var(--accent-text-color, #FF0070);
-  border-inline-end: 1px solid var(--accent-text-color, #FF0070);
+  border-block-start: 1px solid var(--accent-text-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .heading {
   margin-block-start: 285px;
   margin-block-end: 114px;
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 157px;
   font-weight: 700;
   line-height: 130px;
@@ -113,11 +111,12 @@
   text-align: left;
   color: rgba(219, 0, 255, 1);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  text-shadow: 4px 4px 0 var(--accent-text-color, #FF0070);
+  text-shadow: 4px 4px 0 var(--accent-text-color, #ff0070);
 }
 
-.epigraph{
+.epigraph {
   position: absolute;
+  top: 563px;
   right: 20px;
   max-width: 491px;
   margin: 0;
@@ -129,16 +128,16 @@
   position: relative;
   width: 25px;
   height: 25px;
-  top: 718px;
+  bottom: -718px;
   left: 20px;
-  border-block-end: 1px solid var(--accent-text-color, #FF0070);
-  border-inline-start: 1px solid var(--accent-text-color, #FF0070);
+  border-block-end: 1px solid var(--accent-text-color, #ff0070);
+  border-inline-start: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .title-decor {
-  background-color: var(--accent-text-color, #FF0070);
-  color: var(--bg-color,#000028);
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  background-color: var(--accent-text-color, #ff0070);
+  color: var(--text-color, #000028);
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -146,7 +145,7 @@
   margin-block: 0;
 }
 
-.paragraph {
+.section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -154,19 +153,19 @@
   margin-inline-start: 20px;
 }
 
-.themes {
+.title {
   max-width: 315px;
-  color: var(--accent-text-color, #FF0070);
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  color: var(--accent-text-color, #ff0070);
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
 }
 
-.text {
+.paragraph {
   color: var(--main-color-text);
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -175,21 +174,30 @@
 }
 
 .paragraph_content {
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
 }
 
 .text-shadow {
   padding: 0;
   text-decoration: none;
   color: var(--main-color-text);
-  text-shadow: 2px 2px 0 var(---accent-text-color, #FF0070);
+  text-shadow: 2px 2px 0 var(---accent-text-color, #ff0070);
+}
+
+.text-shadow:hover {
+  text-decoration: underline;
+}
+
+.text-shadow:focus {
+  outline: none;
+  border: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .paragraph_thesis {
   padding-block-start: 250px;
 }
 
-.paragraph_thesis_text {
+.paragraph_thesis-text {
   max-width: 649px;
   margin-inline-end: 20px;
   margin-block-start: 15px;
@@ -199,22 +207,13 @@
   margin-block-end: 20px;
 }
 
-.text-shadow:hover {
-  text-decoration: underline;
-}
-
-.text-shadow:focus {
-  outline: none;
-  border: 1px solid var(--accent-text-color, #FF0070);
-}
-
 .paragraph_card {
   display: block;
   margin-block-start: 70px;
-  margin-block-end: 65px;
+  margin-block-end: 55px;
 }
 
-.paragraph_card_text {
+.paragraph_card-text {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -224,7 +223,6 @@
 
 .card {
   min-width: 315px;
-  max-height: 431px;
 }
 
 .paragraph_advice {
@@ -234,7 +232,7 @@
   gap: 10px;
 }
 
-.paragraph_text_advice {
+.paragraph_text-advice {
   max-width: 649px;
   margin-block-start: 15px;
   margin-inline-start: 0px;
@@ -244,7 +242,7 @@
   margin-block-start: 20px;
 }
 
-.decision:not(:last-child){
+.decision:not(:last-child) {
   margin-block-end: 20px;
 }
 
@@ -256,70 +254,68 @@
   margin-inline-end: 20px;
 }
 
-.image-books {
-  grid-area: books;
-  max-width: 100%;
-  height: 100%;
-  flex-shrink: 0; 
+.image {
+  object-position: center;
+  object-fit: cover;
 }
 
-.image-ice-cream {
-  grid-area: ice-cream;
-  max-width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-
-}
-
-.image-street {
-  grid-area: street;
-  max-width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-.image-sunset {
+.image:first-child {
   grid-area: sunset;
   max-width: 100%;
   height: 100%;
   flex-shrink: 0;
 }
 
-.image-tape {
+.image:nth-child(2) {
+  grid-area: ice-cream;
+  max-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.image:nth-child(3) {
   grid-area: tape;
   max-width: 100%;
   height: 100%;
   flex-shrink: 0;
 }
 
-.paragraph_content_pictures {
+.image:nth-child(4) {
+  grid-area: books;
+  max-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.image:last-child {
+  grid-area: street;
+  max-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.paragraph_content-pictures {
   display: grid;
   grid-template-columns: (3, minmax(229px, 315px));
   grid-template-rows: (3, minmax(192px, 260px) minmax(230px, 315px) minmax(318px, 428px));
   grid-template-areas:
-  "sunset sunset ice-cream"
-  "tape books ice-cream"
-  "tape street street";
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
   gap: 20px;
   margin: 0;
 }
 
-.corner_footer {
-  display: inline-block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 4255px;
-  right: 18px;
-  border-block-start: 1px solid var(--accent-text-color, #FF0070);
-  border-inline-end: 1px solid var(--accent-text-color, #FF0070);
+.footer {
+  position: relative;
 }
 
-.footer {
+.footer_title {
   margin-block-start: 379px;
-  margin-block-end: 240px; 
-  margin-inline-start: 277px;
-  font-family: var(--main-font, 'IBM Plex Mono'), sans-serif;
+  margin-block-end: 320px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--main-font, "IBM Plex Mono"), sans-serif;
   font-size: 157px;
   font-weight: 700;
   line-height: 130px;
@@ -327,191 +323,203 @@
   text-align: left;
   color: rgba(219, 0, 255, 1);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  text-shadow: 2px 2px 0 var(--accent-text-color, #FF0070);
+  text-shadow: 2px 2px 0 var(--accent-text-color, #ff0070);
+}
+
+.corner_footer {
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 405px;
+  right: 18px;
+  border-block-start: 1px solid var(--accent-text-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-text-color, #ff0070);
 }
 
 .corner_opposite_footer {
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 25px;
   height: 25px;
-  bottom: 47px;
+  top: 403px;
   left: 21px;
-  border-block-end: 1px solid var(--accent-text-color, #FF0070);
-  border-inline-start: 1px solid var(--accent-text-color, #FF0070);
+  border-block-end: 1px solid var(--accent-text-color, #ff0070);
+  border-inline-start: 1px solid var(--accent-text-color, #ff0070);
 }
 
 @media (width <= 768px) {
   .header__theme-menu-list {
-    right: 20px;
-    top: 170px;
-    flex-direction: column;
-    gap: 11px;
+      right: 20px;
+      top: 170px;
+      flex-direction: column;
+      gap: 11px;
   }
-  
-  .heading {
-    margin-block-start: 415px;
-  }  
 
-  .epigraph{
-    bottom: 190px;
-    max-width: 364px;
+  .heading {
+      margin-block-start: 415px;
+  }
+
+  .epigraph {
+      top: 720px;
+      max-width: 364px;
   }
 
   .corner_opposite {
-    top: 970px;
+      top: 970px;
   }
 
   .paragraph_thesis {
-    padding-block-start: 375px;
+      padding-block-start: 375px;
   }
 
-  .paragraph_thesis_text {
-    max-width: 472px;
+  .paragraph_thesis-text {
+      max-width: 472px;
   }
 
-  .themes {
-    word-wrap: break-word;
+  .title {
+      word-wrap: break-word;
   }
-  
+
   .themes_card {
-    max-width: 236px;
+      max-width: 236px;
   }
 
   .paragraph_card {
-    margin-block-end: 55px;
+      margin-block-end: 55px;
   }
 
-  .paragraph_card_text {
-    flex-direction: column;
-    gap: 10px;
+  .paragraph_card-text {
+      flex-direction: column;
+      gap: 10px;
   }
 
-  .paragraph_text_advice {
-    max-width: 472px;
-  }
-
-  .corner_footer {
-    top: 4840px;
-    right: 20px;
-  }
-
-  .footer {
-    margin-block-start: 510px;
-    margin-inline-start: 204px;
-  }
-
-  .corner_opposite_footer {
-    bottom: -80px;
-    left: 20px;
-  }
-}  
-
-@media (width <= 375px) {
-  .header__theme-menu-list {
-    right: 9px;
-    top: 64px;
-    flex-direction: column;
-    gap: 11px;
-  }
-  
-  .rec {
-    right: 15px;
-  }
-  
-  .heading {
-    margin-inline-start: 10px ;
-    margin-block-start: 215px;
-    font-size: 116px;
-    line-height: 96px;
-  }  
-
-  .epigraph{
-    left: 10px;
-    right: 0;
-    bottom: 60px;
-    max-width: 355px;
-  }
-
-  .corner {
-    right: 10px;
-  }
-
-  .corner_opposite {
-    top: 638px;
-    left: 10px;
-  }
-  
-  .paragraph {
-    flex-direction: column;
-    margin-inline-start: 10px;
-    max-width: 380px;
-  }
-
- .themes {
-  margin-inline-end: -10px; 
-  max-width: 355px;
-  }
-
-  .paragraph_thesis {
-    padding-block-start: 148px;
-  }
-
-  .paragraph_content {
-    margin-inline-end: 10px;
-  }
-
-  .paragraph_thesis_text {
-    margin-block-start: -15px;
-  }
-
-  .paragraph_card {
-    margin-block-start: 40px;
-    margin-block-end: 25px;
-  }
-
-  .paragraph_advice {
-    margin-inline-end: 0px;
-  }
-
-  .paragraph_text_advice {
-    margin-block-start: -5px;
-  }
-
-  .paragraph_pictures  {
-    margin-block-start: 40px;
-    margin-inline-end: 10px;
-  }
-
-  .paragraph_content_pictures  {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-block-start: -10px;
-    margin-inline-end: 0px;
+  .paragraph_text-advice {
+      max-width: 472px;
   }
 
   .corner_footer {
-    top: 6120px;
-    right: 10px;
+      bottom: 533px;
+      right: 20px;
   }
 
-  .footer {
-    margin-block-start: 310px;
-    margin-inline-start: 14px;
-    letter-spacing: -3px;
+  .footer_title {
+      margin-block-start: 510px;
   }
 
   .corner_opposite_footer {
-    bottom: 87px;
-    left: 10px;
+      top: 528px;
+      left: 20px;
   }
 }
 
-@media (width > 768px) {
+@media (width <= 375px) {
   .header__theme-menu-list {
-    flex-direction: row;
-    justify-content: center;
-    gap: 11px;
+      right: 9px;
+      top: 58px;
+      flex-direction: column;
+      gap: 11px;
+  }
+
+  .rec {
+      top: 10px;
+      right: 15px;
+  }
+
+  .heading {
+      margin-inline-start: 10px;
+      margin-block-start: 210px;
+      font-size: 116px;
+      line-height: 96px;
+  }
+
+  .epigraph {
+      left: 10px;
+      right: 0;
+      top: 485px;
+      max-width: 355px;
+  }
+
+  .corner {
+      top: 10px;
+      right: 10px;
+  }
+
+  .corner_opposite {
+      top: 632px;
+      left: 10px;
+  }
+
+  .section {
+      flex-direction: column;
+      margin-inline-start: 10px;
+      max-width: 380px;
+  }
+
+  .title {
+      margin-inline-end: -10px;
+      max-width: 355px;
+  }
+
+  .paragraph_thesis {
+      padding-block-start: 148px;
+  }
+
+  .paragraph_content {
+      margin-inline-end: 10px;
+  }
+
+  .paragraph_thesis-text {
+      margin-block-start: -15px;
+  }
+
+  .paragraph_card {
+      margin-block-start: 40px;
+      margin-block-end: 25px;
+  }
+
+  .paragraph_advice {
+      margin-inline-end: 0px;
+  }
+
+  .paragraph_text-advice {
+      margin-block-start: -5px;
+  }
+
+  .paragraph_pictures {
+      margin-block-start: 40px;
+      margin-inline-end: 10px;
+  }
+
+  .paragraph_content-pictures {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-block-start: -10px;
+      margin-inline-end: 0px;
+  }
+
+  .corner_footer {
+      bottom: 365px;
+      right: 10px;
+  }
+
+  .footer_title {
+      margin-block-start: 310px;
+      letter-spacing: -3px;
+  }
+
+  .corner_opposite_footer {
+      top: 360px;
+      left: 10px;
+  }
+}
+
+@media (width > 1024px) {
+  .header__theme-menu-list {
+      position: inherit;
+      flex-direction: row;
+      justify-content: center;
+      gap: 11px;
   }
 }
