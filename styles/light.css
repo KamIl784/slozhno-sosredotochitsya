@@ -1,28 +1,31 @@
-/* 
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 .page.theme_light {
-  --main-font: 'IBM Plex mono';
-  --bg-color: #FFF1F7;
+  --bg-color: #fff1f7;
   --text-color: #353430;
   --main-color-text: #353430;
-  --accent-text-color: #FF8DCB;
+  --section-heading-color: #353430;
+  --nav-color: #353430;
+  --accent-text-color: #ff8dcb;
+  --title-color: #353430;
+  --header-logo-color: #ffc2e6;
+  --footer-logo-color: #ffc2e6;
   --bg-img: url(../images/cover-image-light.png);
 }
 
-.header__theme-menu-button {
-  color: var(--main-color-text, #353430);
+.theme_light .header__theme-menu-button {
+  color: var(--nav-color, #353430);
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid var(--main-color-text, #353430);
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid var(--nav-color, #353430);
 }
 
-.header__theme-menu-button:focus {
-  border-block-end: 1px solid var(--main-color-text, #353430);
-} 
+.theme_light .header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--nav-color, #353430);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--nav-color, #353430);
+}
 
 .theme_light .rec {
   width: 1px;
@@ -34,17 +37,26 @@
   overflow: hidden;
 }
 
-.theme_light .heading {
-  color: #FFC2E6;
-  text-shadow: 4px 4px 0px #FF0070;
+.theme_light .corner {
+  border-block-start: 1px solid var(--section-heading-color, #353430);
+  border-inline-end: 1px solid var(--section-heading-color, #353430);
 }
 
-.title-decor {
-  color: var(--main-color-text, #353430);
-} 
+.theme_light .heading {
+  color: var(--header-logo-color, #ffc2e6);
+}
+
+.theme_light .corner_opposite {
+  border-block-end: 1px solid var(--section-heading-color, #353430);
+  border-inline-start: 1px solid var(--section-heading-color, #353430);
+}
 
 .theme_light .title {
-  color: #353430;
+  color: var(--title-color, #353430);
+}
+
+.theme_light .title-decor {
+  color: var(--text-color, #353430);
 }
 
 .theme_light .text-shadow:focus {
@@ -53,6 +65,30 @@
 }
 
 .theme_light .footer_title {
-  color: #FFC2E6;
-  text-shadow: 4px 4px 0px #FF0070;
+  color: var(--footer-logo-color, #ffc2e6);
+}
+
+.theme_light .corner_footer {
+  border-block-start: 1px solid var(--section-heading-color, #353430);
+  border-inline-end: 1px solid var(--section-heading-color, #353430);
+}
+
+.theme_light .corner_opposite_footer {
+  border-block-end: 1px solid var(--section-heading-color, #353430);
+  border-inline-start: 1px solid var(--section-heading-color, #353430);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --main-color-text: #353430;
+    --section-heading-color: #353430;
+    --nav-color: #353430;
+    --accent-text-color: #ff8dcb;
+    --title-color: #353430;
+    --header-logo-color: #ffc2e6;
+    --footer-logo-color: #ffc2e6;
+    --bg-img: url(../images/cover-image-light.png);
+  }
 }

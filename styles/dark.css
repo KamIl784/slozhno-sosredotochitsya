@@ -1,24 +1,43 @@
 .page.theme_dark {
-  --main-font: "IBM Plex mono";
   --bg-color: #000028;
   --text-color: #000028;
   --main-color-text: #f1b2ce;
   --accent-text-color: #ff0070;
+  --section-heading-color: #FF0070;
+  --nav-color: #ff0070;
+  --title-color: #FF0070;
   --bg-img: url(../images/cover-image-dark.png);
+  --header-logo-color: #FF00DB;
+  --footer-logo-color: #FF00DB;
 }
 
-.header__theme-menu-button {
-  color: var(--accent-text-color, #ff0070);
+.theme_dark .header__theme-menu-button {
+  color: var(--nav-color, #ff0070);
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid var(--accent-text-color, #ff0070);
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid var(--nav-color, #ff0070);
 }
 
-.header__theme-menu-button:focus {
-  border-block-end: 1px solid var(--accent-text-color, #ff0070);
-} 
+.theme_dark .header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--nav-color, #ff0070);
+}
 
-.title-decor {
+.theme_dark .title-decor {
   color: var(--text-color, #000028);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+    --text-color: #000028;
+    --main-color-text: #f1b2ce;
+    --accent-text-color: #ff0070;
+    --section-heading-color: #FF0070;
+    --nav-color: #ff0070;
+    --title-color: #FF0070;
+    --bg-img: url(../images/cover-image-dark.png);
+    --header-logo-color: #FF00DB;
+    --footer-logo-color: #FF00DB;
+  }
 }
